@@ -1,0 +1,118 @@
+http://www.inf.udec.cl/~leo/teoX.pdf
+
+objcopy --input binary --output elf32-i386 --binary-architecture i386 W.bin W.o
+
+objcopy --input binary --output pe-x86-64 --binary-architecture i386:x86-64 W.bin W.o
+
+sca.exe:     file format pe-x86-64
+architecture: i386:x86-64, flags 0x0000003d:
+
+
+http://stackoverflow.com/questions/1710376/convert-files-of-any-types-to-a-file-with-c-strings
+
+http://www.deadnode.org/sw/bin2h/
+bin2h -c W < W.bin > W.h
+
+http://superuser.com/questions/497953/convert-hex-dump-of-file-to-binaryprogram-file-on-windows
+xxd -i W.bin > W.h
+
+Principales referencias:
+https://balau82.wordpress.com/2012/02/19/linking-a-binary-blob-with-gcc/
+http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967
+http://stackoverflow.com/questions/7893850/long-compile-times-in-visual-c-2010-with-large-static-arrays
+http://pete.akeo.ie/2011/11/bin2coff.html
+http://stackoverflow.com/questions/11278334/including-binary-blob-from-objcopy-in-both-mingw-32-and-64
+
+En últimas:
+
+Guardar archivo binario en matlab: 
+
+	fileID = fopen('magic4.bin','w');
+	fwrite(fileID,magic(4),'double');
+	fclose(fileID);
+
+	Véase: 
+		http://www.mathworks.com/help/matlab/ref/fwrite.html
+
+Generar archivo .obj a partir de archivo binario:
+	objcopy --input binary --output pe-x86-64 --binary-architecture i386:x86-64 W.bin W.o
+	
+	o
+	
+	bin2coff.exe W.bin W.obj W 64bit
+	
+	Definir nombre de símbolo para linker.
+	
+	Véase:
+	http://pete.akeo.ie/2011/11/bin2coff.html
+		
+Trasponer las matrices en Matlab antes de guardar como archivo binario. Opcionalmente, trasponer la matriz en C:
+	
+	Véase: 
+		http://stackoverflow.com/questions/16737298/what-is-the-fastest-way-to-transpose-a-matrix-in-c
+		http://www.codeproject.com/Articles/4522/Introduction-to-SSE-Programming
+
+
+Generar archivo de librería estática con variables:
+
+Utilizando Visual Studio 2010 Command Prompt 64 bits:
+
+	Par un solo .obj:
+	LIB.EXE /OUT:W.LIB W.OBJ
+	
+	Para varios .obj:
+	LIB.EXE /OUT:MYLIB.LIB FILE1.OBJ FILE2.OBJ
+	
+	Véase:
+	http://stackoverflow.com/questions/2727187/creating-dll-and-lib-files-with-the-vc-command-line
+		
+Incluir símbolos en proyecto de C/C++, así:
+
+	extern "C" unsigned char W;
+	extern "C" unsigned char W_size;
+
+Agregar directorio de .lib.
+Agregar nombre de .lib como dependencia adicional en el proyecto de Visual Studio.
+
+Corroborar nombres de símbolos:
+
+Utilizando Visual Studio 2010 Command Prompt 64 bits:
+	dumpbin.exe /symbols W.obj
+	dumpbin.exe /symbols W.lib
+	
+	dumpbin.exe /symbols nombre_lib.lib
+	
+	Véase:
+	https://msdn.microsoft.com/en-us/library/756as972(v=vs.110).aspx
+	
+	o
+	
+	objdump -f nombre_lib.lib
+	
+	Véase:
+	https://sourceware.org/binutils/docs/binutils/objdump.html
+
+Por hacer:
+	Crear librería estática con los nombres de función deseados y con las matrices traspuestas:
+	
+	Véase:
+		https://msdn.microsoft.com/en-us/library/ms235627.aspx
+	
+	
+---Referencias para lectura posterior---
+Compilación desde la línea de comandos con Visual C++:
+	http://matrixprogramming.com/2008/03/compilelinkvc
+
+Migración de Visual Studio a Eclipse CDT:
+	http://www.ibm.com/developerworks/library/os-ecl-vscdt/
+	
+Uso de CMake:
+	http://perso.uclouvain.be/allan.barrea/opencv/building_tools.html
+	
+Manejo de Grandes Arrays en C/C++:
+	https://www.sharcnet.ca/help/index.php/Handling_Large_Arrays
+	
+Alternativas:
+Conversión de archivo .mat a matriz de OpenCV:
+http://stackoverflow.com/questions/11550021/converting-a-mat-file-from-matlab-into-cvmat-matrix-in-opencv
+http://answers.opencv.org/question/6835/using-matlab-data-files-mat-in-c/
