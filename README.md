@@ -1,2 +1,2 @@
 # VPR
-Video Processing &amp; Recognition
+Third-party apps used as components or as references.
