@@ -1,0 +1,6 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine.10.0
+
+Param="WIZARD_NAME = GCPDS-Video-CPP-VS2010-Project"
+Param="ABSOLUTE_PATH = c:\users\gcpds\documents\visual studio 2010\Projects\GCPDS-Video-CPP-VS2010-Project\GCPDS-Video-CPP-VS2010-Project"
+Param="FALLBACK_LCID = 1033"

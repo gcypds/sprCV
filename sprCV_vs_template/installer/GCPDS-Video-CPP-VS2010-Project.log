@@ -1,0 +1,208 @@
+MakeNSIS v2.46 - Copyright 1995-2009 Contributors
+See the file COPYING for license details.
+Credits can be found in the Users Manual.
+
+Processing config: 
+Processing plugin dlls: "C:\Program Files (x86)\NSIS\Plugins\*.dll"
+ - AdvSplash::show
+ - Banner::destroy
+ - Banner::getWindow
+ - Banner::show
+ - BgImage::AddImage
+ - BgImage::AddText
+ - BgImage::Clear
+ - BgImage::Destroy
+ - BgImage::Redraw
+ - BgImage::SetBg
+ - BgImage::SetReturn
+ - BgImage::Sound
+ - Dialer::AttemptConnect
+ - Dialer::AutodialHangup
+ - Dialer::AutodialOnline
+ - Dialer::AutodialUnattended
+ - Dialer::GetConnectedState
+ - InstallOptions::dialog
+ - InstallOptions::initDialog
+ - InstallOptions::show
+ - LangDLL::LangDialog
+ - Math::Script
+ - NSISdl::download
+ - NSISdl::download_quiet
+ - Splash::show
+ - StartMenu::Init
+ - StartMenu::Select
+ - StartMenu::Show
+ - System::Alloc
+ - System::Call
+ - System::Copy
+ - System::Free
+ - System::Get
+ - System::Int64Op
+ - System::Store
+ - TypeLib::GetLibVersion
+ - TypeLib::Register
+ - TypeLib::UnRegister
+ - UserInfo::GetAccountType
+ - UserInfo::GetName
+ - UserInfo::GetOriginalAccountType
+ - VPatch::GetFileCRC32
+ - VPatch::GetFileMD5
+ - VPatch::vpatchfile
+ - nsDialogs::Create
+ - nsDialogs::CreateControl
+ - nsDialogs::CreateItem
+ - nsDialogs::CreateTimer
+ - nsDialogs::GetUserData
+ - nsDialogs::KillTimer
+ - nsDialogs::OnBack
+ - nsDialogs::OnChange
+ - nsDialogs::OnClick
+ - nsDialogs::OnNotify
+ - nsDialogs::SelectFileDialog
+ - nsDialogs::SelectFolderDialog
+ - nsDialogs::SetRTL
+ - nsDialogs::SetUserData
+ - nsDialogs::Show
+ - nsExec::Exec
+ - nsExec::ExecToLog
+ - nsExec::ExecToStack
+
+!define: "MUI_INSERT_NSISCONF"=""
+
+Changing directory to: "C:\Users\GCPDS\AppData\Local\Temp"
+
+Processing script file: "C:\Users\GCPDS\AppData\Local\Temp\nsuCF97.tmp"
+!define: "APP_NAME"="GCPDS-Video-CPP-VS2010-Project"
+!define: "COMP_NAME"="GCPDS"
+!define: "WEB_SITE"="sebastianvilla139@gmail.com"
+!define: "VERSION"="00.00.00.00"
+!define: "COPYRIGHT"="Sebastian Villa  © 2015"
+!define: "DESCRIPTION"="GCPDS-Video-CPP-VS2010-Project"
+!define: "INSTALLER_NAME"="G:\data\sebastianvilla139\work\nsis\Nsisqssg\Output\GCPDS-Video-CPP-VS2010-Project\GCPDS-Video-CPP-VS2010-Project.exe"
+!define: "INSTALL_TYPE"="SetShellVarContext current"
+!define: "REG_ROOT"="HKCU"
+!define: "UNINSTALL_PATH"="Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project"
+VIAddVersionKey: "ProductName" "GCPDS-Video-CPP-VS2010-Project"
+VIAddVersionKey: "CompanyName" "GCPDS"
+VIAddVersionKey: "LegalCopyright" "Sebastian Villa  © 2015"
+VIAddVersionKey: "FileDescription" "GCPDS-Video-CPP-VS2010-Project"
+VIAddVersionKey: "FileVersion" "00.00.00.00"
+SetCompressor: LZMA
+Name: "GCPDS-Video-CPP-VS2010-Project"
+Caption: "GCPDS-Video-CPP-VS2010-Project"
+OutFile: "G:\data\sebastianvilla139\work\nsis\Nsisqssg\Output\GCPDS-Video-CPP-VS2010-Project\GCPDS-Video-CPP-VS2010-Project.exe"
+BrandingText: "GCPDS-Video-CPP-VS2010-Project"
+XPStyle: on
+InstallRegKey: "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project\UninstallString"
+InstallDir: "$PROGRAMFILES\$DOCUMENTS\C:\Users\GCPDS\Documents\Visual Studio 2010\Wizards\GCPDS-Video-CPP-VS2010-Project"
+!include: "C:\Program Files (x86)\NSIS\Include\MUI.nsh"
+!include: "C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh"
+NSIS Modern User Interface version 1.8 - Copyright 2002-2009 Joost Verburg (C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh:8)
+!define: "MUI_INCLUDED"=""
+!define: "MUI_SYSVERSION"="1.8"
+!define: "MUI_VERBOSE"="3"
+!include: closed: "C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh"
+!include: closed: "C:\Program Files (x86)\NSIS\Include\MUI.nsh"
+!define: "MUI_ABORTWARNING"=""
+!define: "MUI_UNABORTWARNING"=""
+!insertmacro: MUI_PAGE_WELCOME
+!insertmacro: end of MUI_PAGE_WELCOME
+!insertmacro: MUI_PAGE_INSTFILES
+!insertmacro: end of MUI_PAGE_INSTFILES
+!insertmacro: MUI_PAGE_FINISH
+!insertmacro: end of MUI_PAGE_FINISH
+!insertmacro: MUI_UNPAGE_CONFIRM
+!insertmacro: end of MUI_UNPAGE_CONFIRM
+!insertmacro: MUI_UNPAGE_INSTFILES
+!insertmacro: end of MUI_UNPAGE_INSTFILES
+!insertmacro: MUI_UNPAGE_FINISH
+!insertmacro: end of MUI_UNPAGE_FINISH
+!insertmacro: MUI_LANGUAGE
+!insertmacro: end of MUI_LANGUAGE
+Section: "-MainProgram"
+SetShellVarContext: current
+SetOverwrite: ifnewer
+SetOutPath: "$INSTDIR"
+File: "GCPDS-Video-CPP-VS2010-Project.ico" [compress] 573/1078 bytes
+File: "GCPDS-Video-CPP-VS2010-Project.vsdir" [compress] 95/137 bytes
+File: "GCPDS-Video-CPP-VS2010-Project.vsz" [compress] 147/178 bytes
+SectionEnd
+Section: "-Additional"
+SetOutPath: "$DOCUMENTS"
+SetOutPath: "$DOCUMENTS\Visual Studio 2010\Wizards\Templates\1033"
+File: "ReadMe.txt" [compress] 541/1421 bytes
+File: "Sample.txt" [compress] 236/549 bytes
+File: "Templates.inf" [compress] 26 bytes
+SetOutPath: "$DOCUMENTS\Visual Studio 2010\Wizards\Scripts\1033"
+File: "default.js" [compress] 6434/15418 bytes
+SetOutPath: "$DOCUMENTS\Visual Studio 2010\Wizards\Images"
+File: "GCPDS-Video-CPP-VS2010-Project.gif" [compress] 2550/2636 bytes
+File: "GCPDS-Video-CPP-VS2010-Project_Background.gif" [compress] 811 bytes
+SetOutPath: "$DOCUMENTS\Visual Studio 2010\Wizards\HTML\1033"
+File: "default.htm" [compress] 2420/9406 bytes
+SetOutPath: "$DOCUMENTS\Visual Studio 2010\Wizards\1033"
+File: "NewStyles.css" [compress] 3569/24266 bytes
+SetOutPath: "$DOCUMENTS\Visual Studio 2010\Wizards\1033\Images"
+File: "DottedHori.gif" [compress] 43 bytes
+File: "DottedVert.gif" [compress] 43 bytes
+File: "spacer.gif" [compress] 43 bytes
+SectionEnd
+Section: "-Icons_Reg"
+SetOutPath: "$INSTDIR"
+WriteUninstaller: "$INSTDIR\uninstall.exe"
+WriteRegStr: HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project\DisplayName=GCPDS-Video-CPP-VS2010-Project
+WriteRegStr: HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project\UninstallString=$INSTDIR\uninstall.exe
+WriteRegStr: HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project\DisplayVersion=00.00.00.00
+WriteRegStr: HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project\Publisher=GCPDS
+WriteRegStr: HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project\URLInfoAbout=sebastianvilla139@gmail.com
+SectionEnd
+Section: "Uninstall"
+SetShellVarContext: current
+Delete: "$INSTDIR\GCPDS-Video-CPP-VS2010-Project.ico"
+Delete: "$INSTDIR\GCPDS-Video-CPP-VS2010-Project.vsdir"
+Delete: "$INSTDIR\GCPDS-Video-CPP-VS2010-Project.vsz"
+Delete: "$INSTDIR\uninstall.exe"
+Delete: "$INSTDIR\GCPDS-Video-CPP-VS2010-Project website.url"
+RMDir: "$INSTDIR"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\Templates\1033\ReadMe.txt"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\Templates\1033\Sample.txt"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\Templates\1033\Templates.inf"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\Scripts\1033\default.js"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\Images\GCPDS-Video-CPP-VS2010-Project.gif"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\Images\GCPDS-Video-CPP-VS2010-Project_Background.gif"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\HTML\1033\default.htm"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\1033\NewStyles.css"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\1033\Images\DottedHori.gif"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\1033\Images\DottedVert.gif"
+Delete: "$DOCUMENTS\Visual Studio 2010\Wizards\1033\Images\spacer.gif"
+RMDir: "$DOCUMENTS\Visual Studio 2010\Wizards\1033\Images"
+RMDir: "$DOCUMENTS\Visual Studio 2010\Wizards\1033"
+RMDir: "$DOCUMENTS\Visual Studio 2010\Wizards\HTML\1033"
+RMDir: "$DOCUMENTS\Visual Studio 2010\Wizards\Images"
+RMDir: "$DOCUMENTS\Visual Studio 2010\Wizards\Scripts\1033"
+RMDir: "$DOCUMENTS\Visual Studio 2010\Wizards\Templates\1033"
+DeleteRegKey: HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\GCPDS-Video-CPP-VS2010-Project
+SectionEnd
+
+Processed 1 file, writing output:
+Adding plug-ins initializing function... Done!
+Processing pages... Done!
+Removing unused resources... Done!
+Generating language tables... Done!
+Generating uninstaller... Done!
+
+Output: "G:\data\sebastianvilla139\work\nsis\Nsisqssg\Output\GCPDS-Video-CPP-VS2010-Project\GCPDS-Video-CPP-VS2010-Project.exe"
+Install: 4 pages (256 bytes), 3 sections (2 required) (3144 bytes), 306 instructions (8568 bytes), 158 strings (2831 bytes), 1 language table (278 bytes).
+Uninstall: 4 pages (256 bytes), 
+1 section (1048 bytes), 238 instructions (6664 bytes), 149 strings (3035 bytes), 1 language table (286 bytes).
+Datablock optimizer saved 7295 bytes (~7.2%).
+
+Using lzma compression.
+
+EXE header size:               47104 / 34304 bytes
+Install code:                   2675 / 15453 bytes
+Install data:                  26512 / 112536 bytes
+Uninstall code+data:           19673 / 25191 bytes
+CRC (0xF3286FAC):                  4 / 4 bytes
+
+Total size:                    95968 / 187488 bytes (51.1%)

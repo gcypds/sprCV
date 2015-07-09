@@ -1,0 +1,1 @@
+(Get-Content test1.txt) | ForEach-Object { $_ -replace "SOLUTION_NAME", "solution_" } | ForEach-Object { $_ -replace "PROJECT_NAME", "project_" } | Set-Content test2.txt
