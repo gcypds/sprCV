@@ -146,7 +146,7 @@ void Datasets_Menu::Loop_Options(DIR *dir, string &main_path, int &fmt)
 		std::cin>>sel;
 
 		//Store in return variable
-		main_path.append(videos[sel]);
+		main_path.append(videos[sel-1]);
 
 		//return format
 		fmt = 2;
