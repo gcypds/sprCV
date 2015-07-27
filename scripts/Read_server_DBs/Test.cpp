@@ -14,6 +14,8 @@ void main()
 		
 		if(F.empty())
 			break;
+			
+		imshow(F);
 		
 		waitKey(15);
 	}
