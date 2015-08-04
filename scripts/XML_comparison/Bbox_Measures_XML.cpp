@@ -190,7 +190,7 @@ void Bbox_Measures_XML::Comparison_Values(vector<P_tuple> BBox1,vector<P_tuple> 
 
 	vector<int> States1, States2;
 
-	// se recorre todos los bounding box para determinar si hay intersección
+	// se recorre todos los bounding box para determinar si hay intersecciÃ³n
 	for (int i=0;i<BBox1.size();i++)
 	{
 		//Get BBox1 states
@@ -318,8 +318,8 @@ int Bbox_Measures_XML::Intersect_Area(vector<int> r1, vector<int> r2)
 		}
 		else
 		{
-			r1.swap(r2);
 			rect_int = r1;
+			r1.swap(r2);
 		}
 	}
 
