@@ -261,82 +261,17 @@ int Bbox_Measures_XML::Intersect_Area(vector<int> r1, vector<int> r2)
 {
 	int area = 0; //initial area of the inner rectangle
 
-	//--stores the information of r1 as (min_x, min_y, max_x, max_y)
-	r1[2] = r1[0]+r1[2];
-	r1[3] = r1[1]+r1[3];
+	int l, r, u, d;
 
-	//--stores the information of r2 as (min_x, min_y, max_x, max_y)
-	r2[2] = r2[0]+r2[2];
-	r2[3] = r2[1]+r2[3];
+	u = max(r1[0],r2[0]);
+	d = min(r1[0]+r1[2],r2[0]+r2[2]);
+	l = max(r1[1],r2[1]);
+	r = min(r1[1]+r1[3],r2[1]+r2[3]);
 
-	//--stores coordinates of the inner rectangle as (min_x, min_y, max_x, max_y)
-	vector<int> rect_int; 
-	rect_int = r2;
-
-	bool in = false; //checks for interception between r1 and r2
-
-	for(int k=0; k<2; k++)
-	{
-		//--stores the coordinates of the vertex of r1
-		vector<cv::Point> r1_pts;
-		r1_pts.push_back(cv::Point(r1[0],r1[1]));			  
-		r1_pts.push_back(cv::Point(r1[2],r1[1]));
-		r1_pts.push_back(cv::Point(r1[0],r1[3]));
-		r1_pts.push_back(cv::Point(r1[2],r1[3]));
-
-		for(int i=0; i<4; i++)
-		{
-			if(Inner_point(r1_pts[i], r2))
-			{
-				in = true;
-				if(i==0)
-				{
-					rect_int[0] = r1[0];
-					rect_int[1] = r1[1];
-				}
-				if(i==1)
-				{
-					rect_int[2] = r1[2];
-					rect_int[1] = r1[1];
-				}
-				if(i==2)
-				{
-					rect_int[0] = r1[0];
-					rect_int[3] = r1[3];
-				}
-				if(i==3)
-				{
-					rect_int[2] = r1[2];
-					rect_int[3] = r1[3];
-				}
-			}
-		}
-		if(in) 
-		{
-			area = (rect_int[2]-rect_int[0])*(rect_int[3]-rect_int[1]); //calculate area
-			k=2;
-		}
-		else
-		{
-			rect_int = r1;
-			r1.swap(r2);
-		}
-	}
-
+	if(u<d&&l<r)
+		area = (d-u)*(r-l);
+	
 	return area;
-}
-
-//-------------------------------------------------------------------------------------
-//Check if a point is inside a rectangle (cx,cy,width,height)
-//-------------------------------------------------------------------------------------
-bool Bbox_Measures_XML::Inner_point(cv::Point v, vector<int> r)
-{
-	bool flag_in = false;
-
-	if((v.x>=r[0])&(v.x<=r[2])&(v.y>=r[1])&(v.y<=r[3]))
-		flag_in = true;
-
-	return flag_in;
 }
 
 //-------------------------------------------------------------------------------------
