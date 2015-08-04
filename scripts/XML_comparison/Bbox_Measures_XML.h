@@ -53,8 +53,6 @@ private:
 
 	int Intersect_Area(vector<int> r1, vector<int> r2);
 
-	bool Inner_point(cv::Point v, vector<int> r);
-
 	void ShowDetections(vector<vector<int>> states, char *plot);
 
 	//--------------------------Variables and Parameters--------------------------
