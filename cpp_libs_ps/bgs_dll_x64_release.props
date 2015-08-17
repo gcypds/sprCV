@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BGS_DLL_DIR>$(BGS_DLL_X64_DIR)\Release</BGS_DLL_DIR>
+    <BGS_DLL_LIB_DIR>$(BGS_DLL_DIR)</BGS_DLL_LIB_DIR>
+    <BGS_DLL_EXEC_DIR>$(BGS_DLL_DIR)</BGS_DLL_EXEC_DIR>
+    <BGS_DLL_LINK_DEPS>BgsDLL.lib;</BGS_DLL_LINK_DEPS>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ExecutablePath>$(BGS_DLL_EXEC_DIR);$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(BGS_DLL_INCLUDE_DIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LibraryPath>$(BGS_DLL_LIB_DIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile />
+    <Link>
+      <AdditionalDependencies>$(BGS_DLL_LINK_DEPS);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="BGS_DLL_DIR">
+      <Value>$(BGS_DLL_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BGS_DLL_LIB_DIR">
+      <Value>$(BGS_DLL_LIB_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BGS_DLL_EXEC_DIR">
+      <Value>$(BGS_DLL_EXEC_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BGS_DLL_LINK_DEPS">
+      <Value>$(BGS_DLL_LINK_DEPS)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

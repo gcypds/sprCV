@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <PEOPLE_DETECTOR_DLL_DIR>$(PEOPLE_DETECTOR_DLL_X64_DIR)\Release</PEOPLE_DETECTOR_DLL_DIR>
+    <PEOPLE_DETECTOR_DLL_LIB_DIR>$(PEOPLE_DETECTOR_DLL_DIR)</PEOPLE_DETECTOR_DLL_LIB_DIR>
+    <PEOPLE_DETECTOR_DLL_EXEC_DIR>$(PEOPLE_DETECTOR_DLL_DIR)</PEOPLE_DETECTOR_DLL_EXEC_DIR>
+    <PEOPLE_DETECTOR_DLL_LINK_DEPS>PeopleDetectorDLL.lib;</PEOPLE_DETECTOR_DLL_LINK_DEPS>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ExecutablePath>$(PEOPLE_DETECTOR_DLL_EXEC_DIR);$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(PEOPLE_DETECTOR_DLL_INCLUDE_DIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LibraryPath>$(PEOPLE_DETECTOR_DLL_LIB_DIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile />
+    <Link>
+      <AdditionalDependencies>$(PEOPLE_DETECTOR_DLL_LINK_DEPS);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="PEOPLE_DETECTOR_DLL_DIR">
+      <Value>$(PEOPLE_DETECTOR_DLL_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PEOPLE_DETECTOR_DLL_LIB_DIR">
+      <Value>$(PEOPLE_DETECTOR_DLL_LIB_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PEOPLE_DETECTOR_DLL_EXEC_DIR">
+      <Value>$(PEOPLE_DETECTOR_DLL_EXEC_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PEOPLE_DETECTOR_DLL_LINK_DEPS">
+      <Value>$(PEOPLE_DETECTOR_DLL_LINK_DEPS)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
