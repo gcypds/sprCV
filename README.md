@@ -1,2 +1,2 @@
 # VPR
-Video Processing &amp; Recognition
+Image and Video analysis toolboxes and apps
