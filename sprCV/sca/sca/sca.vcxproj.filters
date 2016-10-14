@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\xml">
+      <UniqueIdentifier>{2519500c-fae4-415f-9875-621285739fdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\xml">
+      <UniqueIdentifier>{41b986ed-5c6c-414f-bae1-fca2ff30076b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\xml">
+      <UniqueIdentifier>{345828c7-b554-4c21-bdbd-4a2d011abd3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stip">
+      <UniqueIdentifier>{bb7b6586-e40a-439f-ae4c-58831c996a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\stip">
+      <UniqueIdentifier>{942df5fd-410d-44cf-ab98-725a9b35db86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bgs">
+      <UniqueIdentifier>{4b20865c-d1ee-473f-a7d9-bf26c01dc067}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bgs">
+      <UniqueIdentifier>{f9be016d-a2de-420b-82f6-17a0082be2ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\frame_info.cxx">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\group.cxx">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\minion.cxx">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="stip\ActionHOGLibs.cpp">
+      <Filter>Source Files\stip</Filter>
+    </ClCompile>
+    <ClCompile Include="stip\ActionHOGUtils.cpp">
+      <Filter>Source Files\stip</Filter>
+    </ClCompile>
+    <ClCompile Include="bgs\BackgroundSubtractorLBSP.cpp">
+      <Filter>Source Files\bgs</Filter>
+    </ClCompile>
+    <ClCompile Include="bgs\BackgroundSubtractorSuBSENSE.cpp">
+      <Filter>Source Files\bgs</Filter>
+    </ClCompile>
+    <ClCompile Include="bgs\bgfg_segm.cpp">
+      <Filter>Source Files\bgs</Filter>
+    </ClCompile>
+    <ClCompile Include="bgs\Input_source.cpp">
+      <Filter>Source Files\bgs</Filter>
+    </ClCompile>
+    <ClCompile Include="bgs\LBSP.cpp">
+      <Filter>Source Files\bgs</Filter>
+    </ClCompile>
+    <ClCompile Include="bgs\Tracking_STIP.cpp">
+      <Filter>Source Files\bgs</Filter>
+    </ClCompile>
+    <ClCompile Include="getXmlROIs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="compare_xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xml\video.cxx">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\group.hxx">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\frame_info.hxx">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\minion.hxx">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="stip\ActionHOGLibs.h">
+      <Filter>Header Files\stip</Filter>
+    </ClInclude>
+    <ClInclude Include="stip\ActionHOGUtils.h">
+      <Filter>Header Files\stip</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\BackgroundSubtractorLBSP.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\BackgroundSubtractorSuBSENSE.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\DistanceUtils.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\Input_source.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\LBSP.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\RandUtils.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="bgs\Tracking_STIP.h">
+      <Filter>Header Files\bgs</Filter>
+    </ClInclude>
+    <ClInclude Include="getXmlROIs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xml\video.hxx">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CXX_Tree_Mapping_Rule Include="xml\frame_info.xsd">
+      <Filter>Resource Files\xml</Filter>
+    </CXX_Tree_Mapping_Rule>
+    <CXX_Tree_Mapping_Rule Include="xml\group.xsd">
+      <Filter>Resource Files\xml</Filter>
+    </CXX_Tree_Mapping_Rule>
+    <CXX_Tree_Mapping_Rule Include="xml\minion.xsd">
+      <Filter>Resource Files\xml</Filter>
+    </CXX_Tree_Mapping_Rule>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xml\frame_info.xsl">
+      <Filter>Resource Files\xml</Filter>
+    </None>
+    <None Include="xml\group.xml">
+      <Filter>Resource Files\xml</Filter>
+    </None>
+  </ItemGroup>
+</Project>

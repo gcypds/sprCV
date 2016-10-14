@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E4640379-2AB2-4BC7-A2E8-716CF0BEF92B}</ProjectGuid>
+    <RootNamespace>sca</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="config\xsd\xsd-cxx-tree.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config\ps\cpp_libs.props" />
+    <Import Project="config\ps\boost_x86.props" />
+    <Import Project="config\ps\opencv_x86_debug.props" />
+    <Import Project="config\ps\xerces_x86_debug.props" />
+    <Import Project="config\ps\xalan_x86_debug.props" />
+    <Import Project="config\ps\xqilla_x86_debug.props" />
+    <Import Project="config\ps\xsd.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config\ps\cpp_libs.props" />
+    <Import Project="config\ps\boost_x86.props" />
+    <Import Project="config\ps\opencv_x86_release.props" />
+    <Import Project="config\ps\xerces_x86_release.props" />
+    <Import Project="config\ps\xalan_x86_release.props" />
+    <Import Project="config\ps\xqilla_x86_release.props" />
+    <Import Project="config\ps\xsd.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="config\ps\cpp_libs.props" />
+    <Import Project="config\ps\boost_x64.props" />
+    <Import Project="config\ps\opencv_x64_debug.props" />
+    <Import Project="config\ps\xerces_x64_debug.props" />
+    <Import Project="config\ps\xalan_x64_debug.props" />
+    <Import Project="config\ps\xqilla_x64_debug.props" />
+    <Import Project="config\ps\xsd.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="config\ps\cpp_libs.props" />
+    <Import Project="config\ps\boost_x64.props" />
+    <Import Project="config\ps\opencv_x64_release.props" />
+    <Import Project="config\ps\xerces_x64_release.props" />
+    <Import Project="config\ps\xalan_x64_release.props" />
+    <Import Project="config\ps\xqilla_x64_release.props" />
+    <Import Project="config\ps\xsd.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <DisableSpecificWarnings>4005;4996;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <DisableSpecificWarnings>4005;4996;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <DisableSpecificWarnings>4005;4996;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <DisableSpecificWarnings>4005;4996;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bgs\BackgroundSubtractorLBSP.cpp" />
+    <ClCompile Include="bgs\BackgroundSubtractorSuBSENSE.cpp" />
+    <ClCompile Include="bgs\bgfg_segm.cpp" />
+    <ClCompile Include="bgs\Input_source.cpp" />
+    <ClCompile Include="bgs\LBSP.cpp" />
+    <ClCompile Include="bgs\Tracking_STIP.cpp" />
+    <ClCompile Include="compare_xml.cpp" />
+    <ClCompile Include="getXmlROIs.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stip\ActionHOGLibs.cpp" />
+    <ClCompile Include="stip\ActionHOGUtils.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="XMLio.cpp" />
+    <ClCompile Include="xml\frame_info.cxx" />
+    <ClCompile Include="xml\group.cxx" />
+    <ClCompile Include="xml\minion.cxx" />
+    <ClCompile Include="xml\video.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bgs\BackgroundSubtractorLBSP.h" />
+    <ClInclude Include="bgs\BackgroundSubtractorSuBSENSE.h" />
+    <ClInclude Include="bgs\DistanceUtils.h" />
+    <ClInclude Include="bgs\Input_source.h" />
+    <ClInclude Include="bgs\LBSP.h" />
+    <ClInclude Include="bgs\RandUtils.h" />
+    <ClInclude Include="bgs\Tracking_STIP.h" />
+    <ClInclude Include="getXmlROIs.h" />
+    <ClInclude Include="stip\ActionHOGLibs.h" />
+    <ClInclude Include="stip\ActionHOGUtils.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="XMLio.h" />
+    <ClInclude Include="xml\frame_info.hxx" />
+    <ClInclude Include="xml\group.hxx" />
+    <ClInclude Include="xml\minion.hxx" />
+    <ClInclude Include="xml\video.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <CXX_Tree_Mapping_Rule Include="xml\frame_info.xsd">
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xml</OutDir>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenSerialization>
+      <GenDoxygen Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenDoxygen>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenSerialization>
+      <GenDoxygen Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenDoxygen>
+      <RootElement Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </RootElement>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xml</OutDir>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenSerialization>
+    </CXX_Tree_Mapping_Rule>
+    <CXX_Tree_Mapping_Rule Include="xml\group.xsd">
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xml</OutDir>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenSerialization>
+      <GenDoxygen Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenDoxygen>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenSerialization>
+      <GenDoxygen Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenDoxygen>
+      <RootElement Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </RootElement>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xml</OutDir>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenSerialization>
+    </CXX_Tree_Mapping_Rule>
+    <CXX_Tree_Mapping_Rule Include="xml\minion.xsd">
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xml</OutDir>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenSerialization>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xml</OutDir>
+      <GenSerialization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenSerialization>
+    </CXX_Tree_Mapping_Rule>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xml\frame_info.xsl" />
+    <None Include="xml\group.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="config\xsd\xsd-cxx-tree.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,11 @@
+<group>
+  <behaviour type="CHATTING">
+    <person description="test person" id="44">
+      <profile type="DISTRACTED">
+        <frame no="33">
+          <bb gp_or="6.6" gp_x="9.9" gp_y="4.4" lr_x="500" lr_y="600" or="1.1" ul_x="300" ul_y="400"/>
+        </frame>
+      </profile>
+    </person>
+  </behaviour>
+</group>

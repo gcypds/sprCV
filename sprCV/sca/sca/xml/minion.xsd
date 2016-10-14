@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="minion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="rank" type="xs:string"/>
+        <xs:element name="serial" type="xs:positiveInteger"/>
+      </xs:sequence>
+      <xs:attribute name="loyalty" type="xs:float" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

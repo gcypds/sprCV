@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="frame_info" type="frame_info_t" />
+  <xsd:complexType name="frame_info_t">
+    <xsd:sequence>
+      <xsd:element type="xsd:int" name="frame_id"/>
+      <xsd:element name="roi" maxOccurs="unbounded" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element type="xsd:string" name="profile_type"/>
+            <xsd:element type="xsd:short" name="person_id"/>
+            <xsd:element type="xsd:string" name="behaviour_type"/>
+            <xsd:element type="xsd:string" name="person_description"/>
+            <xsd:element type="xsd:short" name="bb_ul_x"/>
+            <xsd:element type="xsd:short" name="bb_ul_y"/>
+            <xsd:element type="xsd:short" name="bb_lr_x"/>
+            <xsd:element type="xsd:short" name="bb_lr_y"/>
+            <xsd:element type="xsd:float" name="bb_or"/>
+            <xsd:element type="xsd:float" name="bb_gp_x"/>
+            <xsd:element type="xsd:float" name="bb_gp_y"/>
+            <xsd:element type="xsd:float" name="bb_gp_or"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>  
+</xsd:schema>
